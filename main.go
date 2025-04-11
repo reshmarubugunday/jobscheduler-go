@@ -7,6 +7,10 @@ import (
 	"time"
 )
 
+// We have 8 trays, each with 12 fixtures, totaling 96 fixtures. Products arrive every second and must be assigned
+// to an available fixture. Each product performs a Work() operation that takes a random time between 3 to 6 seconds
+// (assigned at the time of arrival). How can we implement a job scheduler in Go that accepts incoming products, assigns
+// them to available fixtures, and waits for the Work() to complete before reusing the fixture?
 const (
 	trays           = 8
 	fixturesPerTray = 12
